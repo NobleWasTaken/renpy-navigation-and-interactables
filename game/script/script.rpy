@@ -20,14 +20,14 @@ screen bedroom:
         xpos 479
         ypos 478
         idle "bedroom_bed_idle.png"
-        hover "bedroom_bed_highlight.png"
+        hover "bedroom_bed_hover.png"
         action Jump("test")
 
     imagebutton:
         xpos 882
         ypos 858
         idle "bedroom_arrow_idle.png"
-        hover "bedroom_arrow_highlight.png"
+        hover "bedroom_arrow_hover.png"
         action Jump("test")
 
 label test:
