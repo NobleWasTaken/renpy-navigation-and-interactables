@@ -3,15 +3,15 @@ screen bedroom:
     imagebutton:
         xpos 479
         ypos 478
-        idle "bedroom/bedroom_bed_idle.png"
-        hover "bedroom/bedroom_bed_hover.png"
+        idle "bedroom/bed_idle.png"
+        hover "bedroom/bed_hover.png"
         action Jump("test")
 
     imagebutton:
         xpos 882
         ypos 858
-        idle "bedroom/bedroom_arrow_idle.png"
-        hover "bedroom/bedroom_arrow_hover.png"
+        idle "bedroom/arrow_idle.png"
+        hover "bedroom/arrow_hover.png"
         action Call("test")
 
 label test:
