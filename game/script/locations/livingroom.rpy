@@ -14,12 +14,12 @@ screen livingroom:
         ypos 72
         idle "livingroom/kitchen_door_idle.png"
         hover "livingroom/kitchen_door_hover.png"
-        action Jump("test")
+        action Jump("livingroom_to_kitchen")
 
 label livingroom_to_bedroom:
     $ current_room = "bedroom"
     jump update_gamestate
 
-label test:
-    "kitchen"
+label livingroom_to_kitchen:
+    $ current_room = "kitchen"
     jump update_gamestate

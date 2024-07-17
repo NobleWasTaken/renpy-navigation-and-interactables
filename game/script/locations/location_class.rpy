@@ -27,4 +27,4 @@ init python:
 label init_locations:
     default bedroom = location("bedroom", "bedroom_day", "bedroom_evening", "bedroom_night")
     default livingroom = location("livingroom", "livingroom_day", "livingroom_day", "livingroom_night")
-    # default kitchen = location("kitchen", "kitchen", "livingroom_day", "livingroom_day", "livingroom_night")
+    default kitchen = location("kitchen", "kitchen_day", "kitchen_day", "kitchen_night")
