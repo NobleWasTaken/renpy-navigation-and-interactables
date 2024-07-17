@@ -24,5 +24,5 @@ label init_game:
     return
 
 label update_gamestate:
-    call expression "enter_" + current_room
+    jump expression "enter_" + current_room
     return
