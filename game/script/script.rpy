@@ -9,7 +9,7 @@ label start:
     call play_intro
 
     # enters the game proper
-    call enter_game
+    call update_gamestate
 
     # plays the ending sequence
     call play_ending
@@ -17,10 +17,12 @@ label start:
     return
 
 label init_all:
-    default time_of_day = 3
     define config.window = Hide
+    default time_of_day = 1
+    default current_room = "bedroom"
     call init_locations
     return
 
-label enter_game:
-    $ livingroom.load_scene()
+label update_gamestate:
+    call expression "enter_" + current_room
+    return

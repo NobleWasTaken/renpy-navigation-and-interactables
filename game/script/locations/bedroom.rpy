@@ -1,3 +1,6 @@
+label enter_bedroom:
+    $ bedroom.load_scene()
+
 screen bedroom:
     imagebutton:
         xpos 479
@@ -11,14 +14,14 @@ screen bedroom:
         ypos 858
         idle "bedroom/arrow_idle.png"
         hover "bedroom/arrow_hover.png"
-        action Call("test")
+        action Call("bedroom_to_livingroom")
 
 label pass_time:
     "pass time"
     jump enter_game
     return
 
-label test:
-    "test"
-    jump enter_game
+label bedroom_to_livingroom:
+    $ current_room = "livingroom"
+    jump update_gamestate
     return
