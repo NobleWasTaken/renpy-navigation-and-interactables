@@ -1,6 +1,7 @@
 ﻿# The script of the game goes in this file.
 default time_of_day = 2
 default bedroom = location("bedroom", "bedroom", "bg_day", "bg_evening", "bg_night")
+define config.window = Hide
 
 init python:
     class location:
