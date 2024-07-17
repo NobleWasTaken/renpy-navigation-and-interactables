@@ -1,5 +1,5 @@
 label enter_bedroom:
-    $ bedroom.load_scene()
+    $ bedroom.load()
 
 screen bedroom:
     imagebutton:
@@ -7,21 +7,21 @@ screen bedroom:
         ypos 478
         idle "bedroom/bed_idle.png"
         hover "bedroom/bed_hover.png"
-        action Call("pass_time")
+        action Jump("pass_time")
 
     imagebutton:
         xpos 882
         ypos 858
         idle "bedroom/arrow_idle.png"
         hover "bedroom/arrow_hover.png"
-        action Call("bedroom_to_livingroom")
+        action Jump("bedroom_to_livingroom")
 
 label pass_time:
-    "pass time"
-    jump enter_game
-    return
+    $ time_of_day = time_of_day + 1
+    if time_of_day > 3:
+        $ time_of_day = 1;
+    jump update_gamestate
 
 label bedroom_to_livingroom:
     $ current_room = "livingroom"
     jump update_gamestate
-    return
