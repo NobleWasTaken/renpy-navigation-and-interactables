@@ -7,19 +7,11 @@ screen livingroom:
         ypos 50
         idle "livingroom/bedroom_door_idle.png"
         hover "livingroom/bedroom_door_hover.png"
-        action Jump("livingroom_to_bedroom")
+        action SetVariable("current_room", "bedroom"), Jump("update_gamestate")
 
     imagebutton:
         xpos 344
         ypos 72
         idle "livingroom/kitchen_door_idle.png"
         hover "livingroom/kitchen_door_hover.png"
-        action Jump("livingroom_to_kitchen")
-
-label livingroom_to_bedroom:
-    $ current_room = "bedroom"
-    jump update_gamestate
-
-label livingroom_to_kitchen:
-    $ current_room = "kitchen"
-    jump update_gamestate
+        action SetVariable("current_room", "kitchen"), Jump("update_gamestate")

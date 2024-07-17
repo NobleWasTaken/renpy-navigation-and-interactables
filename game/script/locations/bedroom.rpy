@@ -14,14 +14,10 @@ screen bedroom:
         ypos 858
         idle "bedroom/arrow_idle.png"
         hover "bedroom/arrow_hover.png"
-        action Jump("bedroom_to_livingroom")
+        action SetVariable("current_room", "livingroom"), Jump("update_gamestate")
 
 label pass_time:
     $ time_of_day = time_of_day + 1
     if time_of_day > 3:
         $ time_of_day = 1;
-    jump update_gamestate
-
-label bedroom_to_livingroom:
-    $ current_room = "livingroom"
     jump update_gamestate

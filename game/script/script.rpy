@@ -3,7 +3,7 @@
 # The game starts here.
 label start:
     # init needed data
-    call init_all
+    call init_game
 
     # plays the intro sequence
     call play_intro
@@ -16,7 +16,7 @@ label start:
 
     return
 
-label init_all:
+label init_game:
     define config.window = Hide
     default time_of_day = 1
     default current_room = "bedroom"

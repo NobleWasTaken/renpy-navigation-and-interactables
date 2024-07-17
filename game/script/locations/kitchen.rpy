@@ -7,8 +7,4 @@ screen kitchen:
         ypos 0
         idle "kitchen/livingroom_door_idle.png"
         hover "kitchen/livingroom_door_hover.png"
-        action Jump("kitchen_to_livingroom")
-
-label kitchen_to_livingroom:
-    $ current_room = "livingroom"
-    jump update_gamestate
+        action SetVariable("current_room", "livingroom"), Jump("update_gamestate")
